@@ -1,13 +1,15 @@
-let day = new Date();
-let hh = day.getHours();
-let mm = day.getMinutes();
-let ss = day.getSeconds();
+const hr = document.querySelector('#hr');
+const mn = document.querySelector('#mn');
+const sc = document.querySelector('#sc');
 
-console.log("hours", hh);
-console.log("mins", mm);
-console.log("secs", ss);
+setInterval(() => {
+    let day = new Date();
+    let hh = day.getHours();
+    let mm = day.getMinutes();
+    let ss = day.getSeconds();
 
+    hr.innerHTML = hh + ": ";
+    mn.innerHTML = mm + ":";
+    sc.innerHTML = ss;
 
-const startClock = () => {
-    
-};
+});
